@@ -5,16 +5,16 @@ Create Model with Migration
     `php artisan make:model CustomerModel -m`
 
 Create schema  
-    `Schema::create('customer_models', function (Blueprint $table) {
-        $table->id();
-        $table->string('user_name');
-        $table->string('email')->unique();
-        $table->date('dob');
-        $table->enum('gender', ['M', 'F', 'O']);
-        $table->text('address')->nullable();
-        $table->string('state')->nullable();
-        $table->string('country')->nullable();
-        $table->timestamps();
+    `Schema::create('customer_models', function (Blueprint $table) {  
+        $table->id();  
+        $table->string('user_name');  
+        $table->string('email')->unique();  
+        $table->date('dob');  
+        $table->enum('gender', ['M', 'F', 'O']);  
+        $table->text('address')->nullable();  
+        $table->string('state')->nullable();  
+        $table->string('country')->nullable();  
+        $table->timestamps();  
     });`
 
 Run Migration  
