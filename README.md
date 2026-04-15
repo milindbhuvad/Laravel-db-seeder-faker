@@ -29,7 +29,7 @@ File located at
     use App\Models\CustomerModel;  
     
     Add Below code in run() function  
-    `for($i=0; $i<10; $i++){
+    for($i=0; $i<10; $i++){
         $customer = new CustomerModel();
         $customer->user_name = fake()->name();
         $customer->email = fake()->email();
@@ -39,7 +39,7 @@ File located at
         $customer->state = fake()->state();
         $customer->country = fake()->country();
         $customer->save();
-    }`
+    }
 
 
 Register Seeder  
@@ -47,9 +47,9 @@ Register Seeder
     -> database/seeders/DatabaseSeeder.php  
 
     Add in run function  
-    `$this->call([
+    $this->call([
         CustomerSeeder::class,
-    ]);`
+    ]);
 
 Run Seeder  
     `php artisan db:seed`
